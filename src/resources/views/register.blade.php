@@ -1,7 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 @endsection
+
+@section('header')
+<div class="header__link">
+    <button class="header__button" onclick="location.href='/login'">
+        ログイン
+    </button>
+</div>
+@endsection
+
 @section('content')
 <div class="register__content">
     <div class="register__heading">
