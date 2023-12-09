@@ -1,0 +1,33 @@
+.confirm__heading {
+    text-align: center;
+}
+
+.confirm-table__inner {
+    width: 70%;
+    margin: 30px auto;
+    border: solid 1px #E0DFDE;
+
+}
+
+.confirm-table__header {
+    width: 25%;
+    height: 50px;
+    background-color: #BAA899;
+    border: solid 1px #E0DFDE;
+
+}
+
+.confirm-table__text {
+    width: 100%;
+    border: solid 1px #E0DFDE;
+    padding: 15px 25px;
+}
+
+.confirm-button {
+    font-size: 18px;
+    margin-left: 20px;
+    color: #8B7969;
+    background-color: #fff;
+    border: none;
+    text-decoration: underline;
+}
