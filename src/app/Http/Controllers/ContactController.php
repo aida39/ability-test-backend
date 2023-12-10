@@ -33,13 +33,13 @@ class ContactController extends Controller
     }
     public function admin()
     {
-        $contacts = Contact::with('category')->get();
+        $contacts = Contact::with('category')->Paginate(10);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->DateSearch($request->created_at)->GenderSearch($request->gender)->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
+        $contacts = Contact::with('category')->DateSearch($request->created_at)->GenderSearch($request->gender)->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->Paginate(10);
         $categories = Category::all();
 
         return view('admin', compact('contacts', 'categories'));

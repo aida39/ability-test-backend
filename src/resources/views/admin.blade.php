@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
 @endsection
 
 @section('header')
@@ -102,5 +102,6 @@
         <button>リセット</button>
     </div>
 </form>
+{{ $contacts->appends(request()->query())->links()}}
 @endif
 @endsection
