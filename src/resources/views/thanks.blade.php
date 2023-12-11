@@ -19,15 +19,11 @@
         <div class="thanks__content">
             <div class="thanks__inner">
                 <p class="thanks__text">お問い合わせありがとうございました</p>
-                <!-- <div class="thanks__button"> -->
                 <a class="thanks__button" href="/">HOME</a>
-                <!-- </div> -->
             </div>
-
             <div class="thanks__background">
                 <p>Thank you</p>
             </div>
-
         </div>
     </main>
 </body>

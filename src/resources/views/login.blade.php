@@ -25,14 +25,13 @@
             {{ $message }}
             @enderror
             <label for="">パスワード</label>
-            <input type="password" name="password" placeholder="例:coachtech1106"/>
+            <input type="password" name="password" placeholder="例:coachtech1106" />
             @error('password')
             {{ $message }}
             @enderror
             <div class="button__area">
                 <button class="common-button" type="submit">ログイン</button>
             </div>
-
         </form>
     </div>
 </div>

@@ -1,5 +1,114 @@
-  svg.w-5.h-5 {
-      /*paginateメソッドの矢印の大きさ調整のために追加*/
-      width: 30px;
-      height: 30px;
-  }
+body {
+  color: #8B7969;
+}
+
+.admin__heading {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.admin__content {
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.admin__form__item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.admin__form__item-keyword {
+  width: 35%;
+  height: 45px;
+  border: 1px solid #E3DED9;
+  color: #BEB1A6;
+  background-color: #FBFBFB;
+}
+
+.admin__form__button {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 370px;
+  border: none;
+  background-color: #FBFBFB;
+}
+
+.admin__form__item-gender {
+  width: 10%;
+  height: 45px;
+  border: 1px solid #E3DED9;
+  color: #8b7969;
+  background-color: #f4f4f4;
+}
+
+.admin__form__item-category {
+  width: 20%;
+  height: 45px;
+  border: 1px solid #E3DED9;
+  color: #8b7969;
+  background-color: #f4f4f4;
+}
+
+.admin__form__item-date {
+  width: 20%;
+  height: 45px;
+  border: 1px solid #E3DED9;
+  color: #8b7969;
+  background-color: #f4f4f4;
+}
+
+.admin__function {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.download-button {
+  color: #8b7969;
+  background-color: #edeae6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.admin__table__inner {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.admin__table__header {
+  height: 55px;
+  background-color: #8B7969;
+  color: #fff;
+  text-align: start;
+  padding-left: 50px;
+}
+
+.admin__table__row {
+  border: 1px solid #E3DED9;
+}
+
+.admin__table__text {
+  height: 80px;
+  padding-left: 50px;
+}
+
+.admin__table__text-email {
+  font-family: serif;
+}
+
+.modal-button {
+  padding: 5px 15px;
+  font-size: 16px;
+  border: 1px solid #E3DED9;
+  background-color: #FBFBFB;
+}
+
+.modal-button a {
+  color: #BEB1A6;
+  text-decoration: none;
+}

@@ -28,7 +28,6 @@ services:
         volumes:
             - ./docker/mysql/data:/var/lib/mysql
             - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-        platform: linux/amd64
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
@@ -41,4 +40,3 @@ services:
             - mysql
         ports:
             - 8080:80
-        platform: linux/amd64

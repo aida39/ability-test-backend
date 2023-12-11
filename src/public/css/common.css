@@ -39,16 +39,13 @@ textarea {
     border-bottom: solid 1px #E0DFDE;
     font-family: 'Inika', serif;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     position: relative;
-
 }
 
 .header__inner {
     padding: 20px 15px;
     text-align: center;
-    /* width: 50%; */
 }
 
 .header__logo {
@@ -69,8 +66,6 @@ textarea {
     color: #D9C6B5;
     font-size: 14px;
     font-family: 'Inika', serif;
-
-
 }
 
 .button__area {
@@ -85,7 +80,6 @@ textarea {
     border: 0 solid;
     color: #fff;
     font-size: 18px;
-
 }
 
 .error-message {

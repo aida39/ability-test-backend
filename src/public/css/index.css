@@ -24,7 +24,6 @@
     display: flex;
     width: 1000px;
     height: 35px;
-
 }
 
 .form__input--name {
@@ -34,7 +33,6 @@
 .form__input--name input {
     width: 45%;
     height: 35px;
-
 }
 
 .form__input--radio {
@@ -53,7 +51,6 @@
 .form__input--text select {
     width: 40%;
     height: 35px;
-
 }
 
 .form__input--tel {

@@ -27,7 +27,7 @@ class ContactRequest extends FormRequest
             'first_name' => ['required'],
             'last_name' => ['required'],
             'gender' => ['required'],
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email:filter'],
             'tell-first' => ['required', 'numeric', 'digits_between:1,5'],
             'tell-second' => ['required', 'numeric', 'digits_between:1,5'],
             'tell-third' => ['required', 'numeric', 'digits_between:1,5'],

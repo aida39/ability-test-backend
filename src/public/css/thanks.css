@@ -4,7 +4,6 @@ body {
 
 .thanks__content {
     height: 100vh;
-
 }
 
 .thanks__content::after {
@@ -24,7 +23,6 @@ body {
     height: 100%;
     font-size: 28px;
     font-weight: bold;
-
 }
 
 .thanks__text {

@@ -1,0 +1,45 @@
+.delete__container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.back-button {
+    display: flex;
+    justify-content: end;
+    margin: 20px 50px 0 0;
+}
+
+.back-button a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #8B7969;
+    border: 1px solid #8B7969;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    padding: 0 0 8px 8px;
+}
+
+.delete__table {
+    margin: 40px auto;
+
+}
+
+.delete__table__header {
+    text-align: start;
+    padding-right: 40px;
+}
+
+.delete__table__row {
+    height: 65px;
+}
+
+.delete-button {
+    padding: 10px 25px;
+    border: none;
+    background-color: #ba360e;
+    color: #fff;
+    font-size: 18px;
+}
