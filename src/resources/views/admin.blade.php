@@ -27,10 +27,12 @@
             <form class="admin__form" action="/search" method="get">
                 @csrf
                 <div class="admin__form__item">
-                    <input class="admin__form__item-keyword" type="search" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ old('keyword') }}">
-                    <button class="admin__form__button" type="submit">
-                        <img src="icon.png">
-                    </button>
+                    <div class="admin__form__input-area">
+                        <input class="admin__form__item-keyword" type="search" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ old('keyword') }}">
+                        <button class="admin__form__button" type="submit">
+                            <img src="icon.png">
+                        </button>
+                    </div>
                     <select class="admin__form__item-gender" name="gender">
                         <option value="">性別</option>
                         <option value="">全て</option>

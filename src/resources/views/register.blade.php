@@ -21,20 +21,35 @@
         <form class="form" action="/register" method="post">
             @csrf
             <label for="name">お名前</label>
-            <input type="text" name="name" placeholder="例:山田　太郎" value="{{ old('name') }}" />
-            @error('name')
-            {{ $message }}
-            @enderror
+            <div class="register__form__group">
+                <input type="text" class="register__form__input" name="name" placeholder="例:山田　太郎" value="{{ old('name') }}" />
+                <div class="error-message">
+                    @error('name')
+                    {{ $message }}
+                    @enderror
+                </div>
+            </div>
+
             <label for="email">メールアドレス</label>
-            <input type="email" name="email" placeholder="例:test@example.com" value="{{ old('email') }}" />
-            @error('email')
-            {{ $message }}
-            @enderror
+            <div class="register__form__group">
+                <input type="email" class="register__form__input" name="email" placeholder="例:test@example.com" value="{{ old('email') }}" />
+                <div class="error-message">
+                    @error('email')
+                    {{ $message }}
+                    @enderror
+                </div>
+            </div>
+
             <label for="password">パスワード</label>
-            <input type="password" name="password" placeholder="例:coachtech1106" />
-            @error('password')
-            {{ $message }}
-            @enderror
+            <div class="register__form__group">
+                <input type="password" class="register__form__input" name="password" placeholder="例:coachtech1106" />
+                <div class="error-message">
+                    @error('password')
+                    {{ $message }}
+                    @enderror
+                </div>
+            </div>
+
             <div class="button__area">
                 <button class="common-button" type="submit">登録</button>
             </div>
