@@ -23,7 +23,7 @@ Laravel環境構築
 - MySQL 8.0.26
 
 ## ER図
-![ability-test_ER-Diagram](ability-test.drawio.png)
+![ability-test_ER-Diagram](src/ability-test.drawio.png)
 
 ## URL
 - 開発環境:http://localhost/
