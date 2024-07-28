@@ -18,25 +18,13 @@ class ContactController extends Controller
         ], 200);
     }
 
-    public function confirm(ContactRequest $request)
-    {
-        $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tell-first', 'tell-second', 'tell-third', 'address', 'building', 'detail']);
-        $category = Category::find($request->category_id);
-        if ($request->input('back') == 'back') {
-            return redirect('/')->withInput();
-        }
-        return view('confirm', compact('contact', 'category'));
-    }
-
     public function store(Request $request)
     {
-        if ($request->input('back') == 'back') {
-            return redirect('/')
-                ->withInput();
-        }
         $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'detail']);
         Contact::create($contact);
-        return view('thanks');
+        return response()->json([
+            'data' => $contact
+        ], 201);
     }
 
     public function admin()

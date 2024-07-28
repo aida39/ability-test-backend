@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,12 +11,3 @@ use App\Http\Controllers\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', [ContactController::class, 'index']);
-// Route::post('/confirm', [ContactController::class, 'confirm']);
-// Route::post('/thanks', [ContactController::class, 'store']);
-// Route::get('/admin', [ContactController::class, 'admin']);
-// Route::get('/search', [ContactController::class, 'search']);
-// Route::get('/download', [ContactController::class, 'download']);
-// Route::get('/delete', [ContactController::class, 'delete']);
-// Route::post('/delete', [ContactController::class, 'remove']);
