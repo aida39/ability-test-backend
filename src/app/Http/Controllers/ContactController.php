@@ -29,9 +29,13 @@ class ContactController extends Controller
 
     public function admin()
     {
-        $contacts = Contact::with('category')->Paginate(10);
+        $contacts = Contact::with('category')->get();
+        // $contacts = Contact::with('category')->Paginate(10);
         $categories = Category::all();
-        return view('admin', compact('contacts', 'categories'));
+        return response()->json([
+            'data' => $contacts,
+            'category' => $categories
+        ], 200);
     }
 
     public function search(Request $request)

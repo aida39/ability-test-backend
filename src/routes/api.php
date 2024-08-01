@@ -18,4 +18,10 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'store']);
+Route::get('/admin', [ContactController::class, 'admin']);
 
+// Route::get('/admin', [ContactController::class, 'admin']);
+// Route::get('/search', [ContactController::class, 'search']);
+// Route::get('/download', [ContactController::class, 'download']);
+// Route::get('/delete', [ContactController::class, 'delete']);
+// Route::post('/delete', [ContactController::class, 'remove']);
