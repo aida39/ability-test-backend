@@ -39,9 +39,13 @@ class ContactController extends Controller
 
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->DateSearch($request->created_at)->GenderSearch($request->gender)->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->Paginate(10);
+        $contacts = Contact::with('category')->DateSearch($request->created_at)->GenderSearch($request->gender)->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
+        // $contacts = Contact::with('category')->DateSearch($request->created_at)->GenderSearch($request->gender)->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->Paginate(10);
         $categories = Category::all();
-        return view('admin', compact('contacts', 'categories'));
+        return response()->json([
+            'data' => $contacts,
+            'category' => $categories
+        ], 200);
     }
 
     public function download()
