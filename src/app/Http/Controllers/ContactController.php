@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
-use App\Http\Requests\ContactRequest;
 use App\Models\Category;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
@@ -66,15 +65,19 @@ class ContactController extends Controller
         return $response;
     }
 
-    public function delete(Request $request)
+    public function destroy(Contact $contact)
+    //ルートモデルバインディングを使用、パスパラメータのIDとContactモデルから該当するIDの$contactインスタンスを取得している
+    //ルーティングの記述は'/delete/{contact}'とする、$contact->delete()の記述でContact::を使わずに削除できる
     {
-        $contact = Contact::find($request->id);
-        return view('delete', compact('contact'));
-    }
-
-    public function remove(Request $request)
-    {
-        Contact::find($request->id)->delete();
-        return redirect('/admin');
+        $contact_deleted = $contact->delete();
+        if ($contact_deleted) {
+            return response()->json([
+                'message' => 'Deleted successfully',
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Not found',
+            ], 404);
+        }
     }
 }
