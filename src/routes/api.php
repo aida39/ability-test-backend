@@ -21,7 +21,7 @@ Route::post('/contact', [ContactController::class, 'store']);
 Route::get('/admin', [ContactController::class, 'admin']);
 Route::delete('/delete/{contact}', [ContactController::class, 'destroy']);
 Route::get('/search', [ContactController::class, 'search']);
+// Route::get('/download', [ContactController::class, 'download']); フロントエンド側で実装
 
 // Route::get('/admin', [ContactController::class, 'admin']);
-// Route::get('/download', [ContactController::class, 'download']);
 // Route::get('/delete', [ContactController::class, 'delete']);

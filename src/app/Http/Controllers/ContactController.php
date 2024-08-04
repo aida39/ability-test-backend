@@ -28,8 +28,8 @@ class ContactController extends Controller
 
     public function admin()
     {
-        $contacts = Contact::with('category')->get();
-        // $contacts = Contact::with('category')->Paginate(10);
+        // $contacts = Contact::with('category')->get();
+        $contacts = Contact::with('category')->Paginate(10);
         $categories = Category::all();
         return response()->json([
             'data' => $contacts,
@@ -48,26 +48,27 @@ class ContactController extends Controller
         ], 200);
     }
 
-    public function download()
-    {
-        $users = Contact::all();
-        $csvHeader = [
-            'id', 'category_id', 'first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'detail', 'created_at', 'updated_at'
-        ];
-        $csvData = $users->toArray();
-        $response = new StreamedResponse(function () use ($csvHeader, $csvData) {
-            $handle = fopen('php://output', 'w');
-            fputcsv($handle, $csvHeader);
-            foreach ($csvData as $row) {
-                fputcsv($handle, $row);
-            }
-            fclose($handle);
-        }, 200, [
-            'Content-Type' => 'text/csv',
-            'Content-Disposition' => 'attachment; filename="users.csv"',
-        ]);
-        return $response;
-    }
+    // これでエクスポートできるが、既にフロントの管理画面で表示しているので、わざわざバックエンドにまたリクエストかけるのではなく、フロントエンドで受け取ったjsonデータを使ってcsvにしたほうが効率的
+    // public function download()
+    // {
+    //     $users = Contact::all();
+    //     $csvHeader = [
+    //         'id', 'category_id', 'first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'detail', 'created_at', 'updated_at'
+    //     ];
+    //     $csvData = $users->toArray();
+    //     $response = new StreamedResponse(function () use ($csvHeader, $csvData) {
+    //         $handle = fopen('php://output', 'w');
+    //         fputcsv($handle, $csvHeader);
+    //         foreach ($csvData as $row) {
+    //             fputcsv($handle, $row);
+    //         }
+    //         fclose($handle);
+    //     }, 200, [
+    //         'Content-Type' => 'text/csv',
+    //         'Content-Disposition' => 'attachment; filename="users.csv"',
+    //     ]);
+    //     return $response;
+    // }
 
     public function destroy(Contact $contact)
     //ルートモデルバインディングを使用、パスパラメータのIDとContactモデルから該当するIDの$contactインスタンスを取得している
